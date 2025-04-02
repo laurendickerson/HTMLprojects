@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>New User Information</h1>
+
+<p1>Please enter your information below to be added to our mailing list!</p1>
+<hr>
+
+<form id="userForm"
+  <label for="lblfname">First name:</label>
+  <input type="text" id="inpfname" name="fname"><br><br>
+  <label for="lbllname">Last name:</label>
+  <input type="text" id="inplname" name="lname"><br><br>
+  <label for="lblemail">Email:</label>
+  <input type="text" id="inpemail" name="email"><br><br>
+  <button type="button" onclick="validateForm()">Submit</button>
+</form>
+<script>
+    function validateForm() {
+        const fname = document.getElementById('inpfname').value;
+        const lname = document.getElementById('inplname').value; 
+        const email = document.getElementById('inpemail').value;
+      
+        if (fname.length < 2) {
+          alert("First name has to be greater than 2 characters long!\nFirst Name: " + fname);
+        } else {           
+          if (lname.length < 2) 
+          {
+          alert("Last name has to be greater than 3 characters long!\nLast Name: " + lname);
+
+        }
+        else {
+        alert("First Name: " + fname + "\nLast Name: " + lname + "\nEmail: " + email);
+        }
+      }
+    }
+
+</script>
+</body>
+</html>
